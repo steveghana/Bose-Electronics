@@ -1,0 +1,81 @@
+/* Banner */
+.banner {
+  &__container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__wrapper {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    left: 0%;
+    z-index: -1;
+    background-image: url(../assets/designs/pexels-pavel-danilyuk-8001060.jpg);
+    background-position: center;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    mix-blend-mode: luminosity;
+  }
+  &__text-container {
+    font-size: 4rem;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    background-color: transparent;
+    margin: auto auto auto 0;
+    padding: 5rem 0 0 17vw;
+    display: flex;
+    div {
+      z-index: 4544;
+      color: var(--main) !important;
+    }
+  }
+  &__triangle {
+    margin: auto auto auto 0;
+    width: 150px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    translate: -30px 120px;
+    .item_square {
+      width: 40px;
+      height: 40px;
+      border: 5px solid white;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border: 5px solid white;
+        border-radius: 50%;
+        translate: 100px 0;
+      }
+    }
+    .item_triangle {
+      width: 41px;
+      height: 0px;
+      position: relative;
+      border: 2px solid white;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 41px;
+        height: 0px;
+        border: 2px solid white;
+      }
+      &::before {
+        rotate: 56deg;
+        translate: -11px 13px;
+      }
+      &::after {
+        rotate: -56deg;
+        translate: 9px 13px;
+      }
+    }
+  }
+}

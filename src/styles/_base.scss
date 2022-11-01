@@ -1,0 +1,50 @@
+//========== VARIABLES ==========
+:root {
+  /** COLORS **/
+  --dark-blue: hsl(240, 38%, 20%);
+  --grayish-blue: hsl(0, 0%, 94%);
+  --dark-grayish-blue: #d8d8d8;
+  --main: #503af5;
+  --border-default: gray;
+  --dark-red: #e02020;
+  --yellow: #f7b500;
+  --green: #6dd400;
+  --font: #222428;
+  --dark: #1a1a1a;
+  --dark-text: #575757;
+}
+//========== RESETS ==========
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+//========== TYPOGRAPHY ==========
+
+html,
+body,
+main,
+div,
+span,
+ul,
+a,
+p,
+section,
+article {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+li {
+  cursor: pointer;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--grayish-blue);
+  position: relative;
+}
