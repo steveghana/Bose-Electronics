@@ -1,6 +1,6 @@
 import React from "react";
 import { Search } from "@material-ui/icons";
-import Logo from "../../assets/designs/favpng_bose-corporation-audio-loudspeaker-logo.png";
+import Logo from "../assets/designs/favpng_bose-corporation-audio-loudspeaker-logo.png";
 function Nav() {
   return (
     <nav className="nav">

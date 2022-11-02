@@ -193,6 +193,7 @@
     &__record-section {
       position: relative;
       display: flex;
+      margin-bottom: 6rem;
       width: 100%;
       .super__strong {
         width: 3.5vw;
@@ -212,7 +213,6 @@
         color: var(--main);
         rotate: 90deg;
         padding: 0%;
-        text-shadow: #000000;
         font-size: 12rem;
         position: absolute;
         right: -160px;
@@ -226,6 +226,24 @@
         justify-content: center;
         align-items: center;
         z-index: 5;
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0 0 0 0;
+          margin: auto;
+          border-radius: 100%;
+        }
+        &::after {
+          width: 40px;
+          height: 40px;
+          background-color: var(--main);
+        }
+        &::before {
+          background-color: rgba($color: #503af5, $alpha: 0.5);
+          width: 50px;
+          height: 50px;
+        }
       }
       &::before {
         content: "";
@@ -272,11 +290,43 @@
         background-repeat: no-repeat;
         background-size: contain;
       }
-      img {
-        object-fit: contain;
-        width: 80%;
-        margin: auto;
-        box-shadow: 0 30px black;
+      .disk__img {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::before {
+          pointer-events: none;
+          content: "";
+          position: absolute;
+          bottom: 2.5%;
+          right: 28vw;
+          width: 35%;
+          z-index: 100;
+          height: 1%;
+          background: rgb(3, 3, 3);
+          transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+          filter: blur(1em);
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0%;
+          right: 0%;
+          left: 0%;
+          bottom: 0%;
+          box-shadow: 0 0 2em 0.5em var(--cir-neon);
+          background: var(--cir-neon);
+          z-index: -1;
+          opacity: 0;
+          transition: opacity 100ms linear;
+        }
+        img {
+          object-fit: contain;
+          width: 80%;
+          margin: auto;
+        }
       }
       .disk__innerText {
         position: absolute;
@@ -287,6 +337,16 @@
         gap: 2rem;
         font-size: smaller;
         color: white;
+        ::after {
+          content: "";
+          position: absolute;
+          background-color: var(--main);
+          width: 4vw;
+          height: 30vh;
+          z-index: 1000;
+          margin: auto;
+          inset: 50vh 90vw 0 0;
+        }
         span {
           color: var(--main);
         }
