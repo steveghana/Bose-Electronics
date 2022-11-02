@@ -193,7 +193,7 @@
     &__record-section {
       position: relative;
       display: flex;
-      margin-bottom: 6rem;
+      margin-bottom: 9rem;
       width: 100%;
       .super__strong {
         width: 3.5vw;
@@ -342,13 +342,119 @@
           position: absolute;
           background-color: var(--main);
           width: 4vw;
-          height: 30vh;
+          height: 25vh;
           z-index: 1000;
           margin: auto;
-          inset: 50vh 90vw 0 0;
+          inset: 45vh 5vw 0 0;
         }
         span {
           color: var(--main);
+        }
+      }
+    }
+  }
+  .product {
+    &__category {
+      width: 100%;
+      margin-top: -135px;
+      display: flex;
+    }
+    &__grid {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      .text {
+        display: flex;
+        gap: 1rem;
+        // justify-content: space-between;
+        flex-direction: column;
+
+        button {
+          margin-top: 2rem;
+          margin-right: auto;
+          padding: 0.1rem 1rem;
+        }
+      }
+    }
+    &__cat-wrapper:nth-child(2) {
+      height: 40vh;
+    }
+    &__cat-wrapper {
+      display: flex;
+      width: 100%;
+      div {
+        // border: 2px solid gray;
+      }
+      .music__player-img {
+        width: 24vw;
+        height: 100%;
+        background-image: url(../assets/designs/pexels-nardo-3574678.jpg);
+        background-position: bottom;
+        mix-blend-mode: luminosity;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .product__soundbar {
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        color: black;
+        p {
+          font-size: x-small;
+          color: black;
+        }
+        div,
+        h2 {
+          color: black;
+        }
+        .soundbar__img img {
+          width: 30vw;
+        }
+      }
+      .soundbach__text {
+        padding: 2rem;
+        display: flex;
+        font-size: large;
+        // margin-right: auto;
+        gap: 1rem;
+        position: relative;
+        border-top: 0.1px solid rgba($color: gray, $alpha: 0.2);
+        border-left: 0.1px solid rgba($color: gray, $alpha: 0.2);
+        border-bottom: 0.1px solid rgba($color: gray, $alpha: 0.2);
+        img {
+          // position: absolute;
+          top: 0;
+          margin-top: -2rem;
+          right: 19vw;
+          width: 300px;
+        }
+        p {
+          font-size: x-small;
+        }
+        h2 {
+          color: white;
+        }
+        div {
+          color: black;
+        }
+      }
+      .earbuds {
+        border-top: 0.3px solid rgba($color: gray, $alpha: 0.2);
+        border-left: 0.3px solid rgba($color: gray, $alpha: 0.2);
+        border-bottom: 0.3px solid rgba($color: gray, $alpha: 0.2);
+        position: relative;
+        width: 24vw;
+        padding: 2rem 0 2rem 2rem;
+        display: flex;
+        flex-direction: column;
+        img {
+          // position: absolute;
+          margin-top: -2.4rem;
+          rotate: -30deg;
+          translate: 0px 0px;
+          width: 24vw;
         }
       }
     }
