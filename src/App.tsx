@@ -1,4 +1,5 @@
 import React from "react";
+import Accesories from "./components/Accesories";
 import Banner from "./components/Banner";
 import Nav from "./components/Nav";
 import Slide from "./components/Slide";
@@ -11,6 +12,7 @@ function App() {
       <Banner />
       <Slide />
       <Slider />
+      <Accesories />
     </div>
   );
 }

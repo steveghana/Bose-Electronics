@@ -1,0 +1,93 @@
+.accesories {
+  &__container {
+    width: 100%;
+    height: 59vh;
+    display: flex;
+    align-items: center;
+  }
+  &__right {
+    width: 60%;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    &::before {
+      content: "";
+      width: 90%;
+      position: absolute;
+      z-index: 3;
+      inset: 0 0 0 0;
+      margin: auto;
+      height: 90%;
+      border: 5px solid var(--main);
+    }
+    img {
+      object-fit: contain;
+      object-position: bottom left;
+      width: 2500px;
+      height: 100%;
+    }
+  }
+  &__left {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    div {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+  &__bottom {
+    height: 40%;
+    width: 100%;
+    position: relative;
+    background: url(../assets/designs/aec.jpg);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #503af5, $alpha: 0.7);
+      inset: 0 0 0 0;
+    }
+  }
+  &__top {
+    display: flex;
+    height: 60%;
+    width: 100%;
+    background-color: aqua;
+    div:nth-child(2) {
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+  &__images {
+    background: linear-gradient(
+      to right,
+      #585858,
+      #575757,
+      #4d4d4d,
+      #4a4a4a,
+      #464646,
+      #444444,
+      #424242,
+      #3d3d3d
+    );
+    .jack {
+      object-fit: cover;
+      object-position: left;
+    }
+    img:nth-child(2) {
+      object-fit: contain;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
