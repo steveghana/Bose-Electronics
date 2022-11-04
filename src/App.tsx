@@ -5,6 +5,8 @@ import Nav from "./components/Nav";
 import ProductItems from "./components/ProductItems";
 import Slide from "./components/Slide";
 import Slider from "./components/slider";
+import Description from "./components/Description";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <Slider />
       <Accesories />
       <ProductItems />
+      <Description />
+      <Footer />
     </div>
   );
 }

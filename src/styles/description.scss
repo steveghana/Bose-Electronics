@@ -1,0 +1,37 @@
+.description {
+  &__container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+  }
+  &__right {
+    width: 30%;
+    border: 2px solid black;
+  }
+  &__left,
+  &__center {
+    width: calc(70% / 2);
+    border: 2px solid black;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    &-top,
+    &-bottom {
+      height: 50%;
+      background-color: brown;
+      border: 1px solid black;
+    }
+  }
+  &__right {
+    position: relative;
+    div {
+      height: 70%;
+      width: 70%;
+      background-color: aqua;
+      position: absolute;
+      top: -20%;
+      left: 0%;
+    }
+  }
+}

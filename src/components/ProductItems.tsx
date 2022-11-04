@@ -1,6 +1,7 @@
 import React from "react";
 import Headphones from "../assets/designs/headcont.png";
 import Single from "../assets/designs/image.jpg";
+import Dualheadphones from "../assets/designs/dualheadphones.png";
 function ProductItems() {
   return (
     <>
@@ -31,10 +32,27 @@ function ProductItems() {
               <img src={Headphones} alt="" />
               <img src={Single} alt="" />
             </div>
-            <div className="product__image-box-container">
-              <img src={Headphones} alt="" />
-              <img src={Headphones} alt="" />
-            </div>
+          </div>
+        </div>
+      </div>
+      <div className="product__image-box-container">
+        <img src={Headphones} alt="" />
+        <img src={Headphones} alt="" />
+      </div>
+      <div className="headphones__container">
+        <div className="headphones__text-wrapper">
+          <h1>
+            High end <br /> original <br /> headphones
+          </h1>
+          <div>LOREM IPSUM</div>
+          <p>Feel excited a place or</p>
+          <button>lorem</button>
+        </div>
+        <img src={Dualheadphones} alt="Headphone" />
+        <div className="headphones__text-right">
+          <p>LOREM IPSUM</p>
+          <div>
+            Make you Feel <br /> excited with sound
           </div>
         </div>
       </div>

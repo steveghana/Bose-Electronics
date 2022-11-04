@@ -145,39 +145,101 @@
       border: none;
       display: flex;
       gap: 1rem;
-      // margin: auto;
     }
   }
   &__image-container {
     height: 60vh;
+    pointer-events: none;
     width: 65%;
     display: flex;
     flex-direction: column;
     position: absolute;
-    bottom: -30vh;
+    bottom: 0vh;
     left: 0%;
     div {
+      margin-top: auto;
       height: 50%;
       img {
         width: 50%;
-        height: 100%;
         object-position: center;
+        height: 100%;
         object-fit: cover;
       }
     }
   }
-  &__image-box-container {
-    width: 100%;
+}
+.product__image-box-container {
+  width: calc(var(--trimed-width));
+  display: flex;
+  // height: 20vh;
+  margin-left: auto;
+  position: relative;
+  background-color: blueviolet;
+  img {
+    width: 32.5%;
+    object-fit: cover;
+  }
+  img:nth-child(2) {
+    position: absolute;
+    width: 28%;
+    height: 100%;
+    right: 6vw;
+  }
+}
+.headphones {
+  &__container {
+    width: var(--trimed-width);
     display: flex;
-    background-color: blueviolet;
+    justify-content: flex-start;
+    gap: 2.5vw;
     margin-left: auto;
-    position: relative;
     img {
-      position: absolute;
+      width: 30vw;
+      height: 400px;
+      object-position: bottom;
+      object-fit: contain;
+      padding-top: 5rem;
     }
-    img:nth-child(2) {
-      width: 30%;
-      right: -30%;
+  }
+  &__text-right {
+    display: flex;
+    flex-direction: column;
+    translate: 0 -5vh;
+    margin: auto 0;
+    gap: 1em;
+    justify-content: center;
+    p {
+      color: black;
+      font-size: small;
+      font-weight: bolder;
+    }
+    div {
+      font-size: large;
+      color: gray;
+    }
+  }
+  &__text-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: black;
+    margin: auto 0;
+    justify-content: center;
+    h1 {
+      font-size: 3.2vw;
+    }
+
+    p {
+      color: gray;
+      font-size: x-small;
+    }
+    div {
+      color: black;
+      font-size: small;
+    }
+    button {
+      margin-right: auto;
     }
   }
 }
