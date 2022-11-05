@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Widgets/Button";
 import MusicRecord from "../Widgets/MusicRecord";
 import ProductsCate from "../Widgets/ProductsCate";
 function Slide() {
@@ -13,7 +14,7 @@ function Slide() {
             </div>
             <p>LOREM IPSUM</p>
             <div className="plus">+</div>
-            <button> lorem </button>
+            <Button color={"white"} />
           </div>
           <div className="slider__img"></div>
         </div>
@@ -25,7 +26,7 @@ function Slide() {
             </div>
             <p>LOREM IPSUM</p>
             <div className="plus">+</div>
-            <button> lorem </button>
+            <Button color={"white"} />
           </div>
           <div className="slider__img"></div>
         </div>
@@ -37,7 +38,7 @@ function Slide() {
             </div>
             <p>LOREM IPSUM</p>
             <div className="plus">+</div>
-            <button> lorem </button>
+            <Button color={"white"} />
           </div>
           <div className="slider__img"></div>
         </div>
@@ -48,7 +49,7 @@ function Slide() {
             </div>
             <p>LOREM IPSUM</p>
             <div className="plus">+</div>
-            <button> lorem </button>
+            <Button color={"white"} />
           </div>
           <div className="slider__img"></div>
         </div>

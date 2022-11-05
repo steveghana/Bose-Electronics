@@ -1,7 +1,10 @@
 import React from "react";
-import Headphones from "../assets/designs/headcont.png";
-import Single from "../assets/designs/image.jpg";
-import Dualheadphones from "../assets/designs/dualheadphones.png";
+import set from "../assets/designs/earphones-477446_1920.jpg";
+import Mpow from "../assets/designs/airpods-apple-earbuds.png";
+import Single from "../assets/designs/pngwing.com.png";
+import Dualheadphones from "../assets/designs/kindpng_995599.png";
+import Headphones from "../assets/designs/dualheadphones.png";
+import Button from "../Widgets/Button";
 function ProductItems() {
   return (
     <>
@@ -23,21 +26,34 @@ function ProductItems() {
               researchers, retailers, marketing personnel, And dreamers. One
               goal converges us our customers can't get anywhere else.
             </p>
-            <button>
-              <span>-</span> Ipsum
-            </button>
+            <Button color={"#503af5"} />
           </div>
           <div className="product__image-container">
-            <div>
-              <img src={Headphones} alt="" />
-              <img src={Single} alt="" />
+            <div className="imgcontainer">
+              <div className="img1">
+                <div className="img1__numb">10</div>
+                <img src={set} alt="" />
+              </div>
+              <div className="img2">
+                <div className="img2__numb">10</div>
+                <img src={Single} alt="" />
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div className="product__image-box-container">
-        <img src={Headphones} alt="" />
-        <img src={Headphones} alt="" />
+        <div className="img3">
+          <div className="img3__numb">10</div>
+          <div className="img3__text">
+            Unprecedented <br /> ear cup <br /> headphones
+          </div>
+          <img src={Mpow} alt="" />
+        </div>
+        <div className="img4">
+          <img src={Headphones} alt="" />
+          <div className="img4__numb">10</div>
+        </div>
       </div>
       <div className="headphones__container">
         <div className="headphones__text-wrapper">
@@ -46,7 +62,7 @@ function ProductItems() {
           </h1>
           <div>LOREM IPSUM</div>
           <p>Feel excited a place or</p>
-          <button>lorem</button>
+          <Button color="white" />
         </div>
         <img src={Dualheadphones} alt="Headphone" />
         <div className="headphones__text-right">

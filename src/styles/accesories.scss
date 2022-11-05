@@ -21,9 +21,13 @@
       border: 5px solid var(--main);
     }
     img {
-      object-fit: contain;
-      object-position: bottom left;
-      width: 2500px;
+      background-color: white;
+      object-fit: cover;
+      object-position: left;
+      translate: 40px 0;
+      width: 50vw;
+      z-index: 14;
+      padding: 1rem;
       height: 100%;
     }
   }
@@ -138,13 +142,11 @@
     }
   }
   &__text-right {
-    button {
-      margin-top: 3rem;
-      padding: 0.4rem 1rem;
-      background-color: var(--main);
-      border: none;
-      display: flex;
-      gap: 1rem;
+    p {
+      color: #b9b9b9;
+    }
+    .btn {
+      margin-top: 5rem;
     }
   }
   &__image-container {
@@ -156,13 +158,46 @@
     position: absolute;
     bottom: 0vh;
     left: 0%;
-    div {
+    .imgcontainer {
       margin-top: auto;
       height: 50%;
-      img {
+      display: flex;
+      width: 100%;
+      .img1,
+      .img2 {
         width: 50%;
-        object-position: center;
         height: 100%;
+        position: relative;
+        &__numb {
+          top: 3%;
+          z-index: 2;
+          right: 3%;
+          position: absolute;
+          font-size: smaller;
+        }
+      }
+      .img1 {
+        &::before {
+          content: "";
+          width: 100%;
+          z-index: 1;
+          height: 100%;
+          background: rgba($color: black, $alpha: 0.3);
+          position: absolute;
+        }
+        img {
+          mix-blend-mode: luminosity;
+        }
+      }
+      .img2 img {
+        object-position: top;
+        object-fit: contain;
+        background: rgb(41, 41, 41);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-position: center;
         object-fit: cover;
       }
     }
@@ -171,19 +206,69 @@
 .product__image-box-container {
   width: calc(var(--trimed-width));
   display: flex;
-  // height: 20vh;
   margin-left: auto;
   position: relative;
-  background-color: blueviolet;
-  img {
-    width: 32.5%;
-    object-fit: cover;
+  .img3,
+  .img4 {
+    max-height: 40vh;
+    &__numb {
+      position: absolute;
+      top: 3%;
+      right: 3%;
+      font-size: smaller;
+    }
   }
-  img:nth-child(2) {
+  .img3 {
+    width: 32.5%;
+    position: relative;
+    &__text {
+      position: absolute;
+      inset: 0 0 0 0;
+      margin: auto;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+    &::before {
+      content: "";
+      width: 100%;
+      background: linear-gradient(
+        to right,
+        #4d36ff,
+        #5742fd,
+        #634ffa,
+        #5d48ff,
+        #7461ff,
+        #8271ff,
+        #8c7dff
+      );
+      opacity: 0.5;
+
+      position: absolute;
+      inset: 0 0 0 0;
+      height: 100%;
+    }
+    img {
+      object-fit: cover;
+      background-color: #222121;
+      object-position: -1vw 19px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .img4 {
     position: absolute;
     width: 28%;
     height: 100%;
     right: 6vw;
+    img {
+      object-fit: cover;
+      background-color: #222121;
+      object-position: top;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 .headphones {

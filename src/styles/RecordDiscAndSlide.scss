@@ -108,26 +108,8 @@
       visibility: hidden;
     }
     button {
-      cursor: pointer;
-      margin-right: auto;
+      // margin-right: auto;
       visibility: hidden;
-      border: none;
-      display: flex;
-      position: relative;
-      justify-content: flex-end;
-      background-color: white;
-      color: black;
-      padding: 0.3rem 1rem;
-      width: 100px;
-      font-size: 11px;
-      &::before {
-        content: "";
-        width: 10px;
-        border: 1px solid black;
-        position: absolute;
-        left: 10%;
-        top: 40%;
-      }
     }
     div {
       font-family: "Century Gothic", Helvetica, sans-serif;
@@ -215,33 +197,7 @@
         right: -160px;
         top: 27vh;
       }
-      .music__play-btn {
-        position: absolute;
-        inset: 0 0 0 0;
-        margin: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 5;
-        &::before,
-        &::after {
-          content: "";
-          position: absolute;
-          inset: 0 0 0 0;
-          margin: auto;
-          border-radius: 100%;
-        }
-        &::after {
-          width: 40px;
-          height: 40px;
-          background-color: var(--main);
-        }
-        &::before {
-          background-color: rgba($color: #503af5, $alpha: 0.5);
-          width: 50px;
-          height: 50px;
-        }
-      }
+
       &::before {
         content: "";
         inset: 0 0 0 0;

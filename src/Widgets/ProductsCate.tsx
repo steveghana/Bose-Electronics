@@ -2,6 +2,7 @@ import React from "react";
 import Headset from "../assets/designs/headset.png";
 import Earbuds from "../assets/designs/cq5dam.web.320.320.png";
 import BluetoothSpeaker from "../assets/designs/wireless-speaker-loudspeaker-jbl-headphones-bose-soundlink-bluetooth-5fb7839b7d8056574bef2caef9280e11.png";
+import Button from "./Button";
 function Text() {
   return (
     <div className="text">
@@ -11,7 +12,7 @@ function Text() {
         soundbar{" "}
       </h2>
       <div>lorem ipsum</div>
-      <button>lorem</button>
+      <Button color="white" />
     </div>
   );
 }

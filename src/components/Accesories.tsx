@@ -1,8 +1,8 @@
 import React from "react";
-import Soundbar from "../assets/designs/blue.webp";
+import Soundbar from "../assets/designs/bose.webp";
 import Garret from "../assets/designs/pexels-garrett-morrow-1649771.jpg";
 import SinglePiece from "../assets/designs/head.png";
-import Bottom from "../assets/designs/A1cfhCfzrsL._CR0,0,1809,954_SR580,306_.jpg";
+import Play from "../Widgets/Play";
 function Accesories() {
   return (
     <div className="accesories__container">
@@ -15,11 +15,10 @@ function Accesories() {
             <img src={Garret} alt="" />{" "}
           </div>
         </div>
-        <div className="accesories__bottom">
-          {/* <img src={Bottom} alt="" />{" "} */}
-        </div>
+        <div className="accesories__bottom"></div>
       </div>
       <div className="accesories__right">
+        <Play />
         <img src={Soundbar} alt="" />
       </div>
     </div>

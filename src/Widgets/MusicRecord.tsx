@@ -1,6 +1,7 @@
 import React from "react";
 import { PlayArrow } from "@material-ui/icons";
 import Disk from "../assets/designs/1755220.png";
+import Play from "./Play";
 
 function MusicRecord() {
   return (
@@ -18,9 +19,7 @@ function MusicRecord() {
         <h2 className="super__strong">
           sup <br /> erstro <br /> ng
         </h2>
-        <div className="music__play-btn">
-          <PlayArrow style={{ zIndex: "8" }} fontSize="large" />
-        </div>
+        <Play />
         <h1 className="brand__text">BOSE</h1>
         <div className="music__concert"></div>
         <div className="disk__img">
