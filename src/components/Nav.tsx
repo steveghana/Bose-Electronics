@@ -1,5 +1,6 @@
 import React from "react";
 import { Search } from "@material-ui/icons";
+import { Shop, MessageOutlined, LocationOnOutlined } from "@material-ui/icons";
 import Logo from "../assets/designs/favpng_bose-corporation-audio-loudspeaker-logo.png";
 function Nav() {
   return (
@@ -14,23 +15,27 @@ function Nav() {
         <div className="nav__list-container">
           <li className="nav__list-item">
             item
-            <div className="nav_dot">.</div>
+            <div className="nav_dot">+</div>
           </li>
           <li className="nav__list-item">
             item
-            <div className="nav_dot">.</div>
+            <div className="nav_dot">+</div>
           </li>
           <li className="nav__list-item">
             item
-            <div className="nav_dot">.</div>
+            <div className="nav_dot">+</div>
           </li>
           <li className="nav__list-item">
             Boss <span>item</span>
           </li>
           <li className="nav__list-item">item</li>
-          <li className="nav__list-message-icon">icon</li>
-          <li className="nav__list-location-icon">icon</li>
-          <li className="nav__list-lang">Eng</li>
+          <li className="nav__list-message-icon">
+            <MessageOutlined fontSize="small" />
+          </li>
+          <li className="nav__list-location-icon">
+            <LocationOnOutlined fontSize="small" />
+          </li>
+          <li className="nav__list-lang">En / Ch</li>
         </div>
       </ul>
     </nav>

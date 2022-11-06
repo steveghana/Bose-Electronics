@@ -13,6 +13,7 @@
   --dark: #1a1a1a;
   --trimed-width: 83vw;
   --dark-text: #575757;
+  --fade-text: rgba($color: #ffffff, $alpha: 0.8);
 }
 //========== RESETS ==========
 *,
@@ -35,11 +36,11 @@ a,
 p,
 section,
 article {
-  font-family: Arial, Helvetica, sans-serif;
   color: white;
   margin: 0;
   text-decoration: none;
   list-style-type: none;
+  font-family: "Poppins", "Century Gothic", Arial, Helvetica, sans-serif;
 }
 li {
   cursor: pointer;
@@ -49,6 +50,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--grayish-blue);
   position: relative;
+  overflow-x: hidden;
 }
 
 .music__play-btn {
@@ -95,5 +97,34 @@ body {
     position: absolute;
     margin: auto;
     inset: 0 50% 0 0;
+  }
+}
+.Circle {
+  width: 40px;
+  height: 40px;
+  border: 4px solid white;
+  border-radius: 100%;
+}
+.Square {
+  border: 4px solid white;
+  width: 40px;
+  height: 40px;
+}
+.number {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 5%;
+  z-index: 3;
+  font-size: xx-small;
+}
+.description__header {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid white;
+  h1 {
+    font-size: larger;
+  }
+  div {
+    font-size: x-small;
   }
 }

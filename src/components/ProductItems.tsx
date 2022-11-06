@@ -1,10 +1,11 @@
 import React from "react";
-import set from "../assets/designs/earphones-477446_1920.jpg";
-import Mpow from "../assets/designs/airpods-apple-earbuds.png";
-import Single from "../assets/designs/pngwing.com.png";
+import set from "../assets/designs/clikcase.jpg";
+import Mpow from "../assets/designs/Mymanu-Clik-Translation-Earbuds-06-1024x768.jpg";
+import Single from "../assets/designs/copy.jpg";
 import Dualheadphones from "../assets/designs/kindpng_995599.png";
-import Headphones from "../assets/designs/dualheadphones.png";
+import Headphones from "../assets/designs/bulb.jpg";
 import Button from "../Widgets/Button";
+import { Number, Square } from "../Widgets/Icons";
 function ProductItems() {
   return (
     <>
@@ -31,11 +32,14 @@ function ProductItems() {
           <div className="product__image-container">
             <div className="imgcontainer">
               <div className="img1">
-                <div className="img1__numb">10</div>
+                <Number numb="08" />
+                <div className="img1__square">
+                  <Square />
+                </div>
                 <img src={set} alt="" />
               </div>
               <div className="img2">
-                <div className="img2__numb">10</div>
+                <Number numb="09" />
                 <img src={Single} alt="" />
               </div>
             </div>
@@ -44,7 +48,7 @@ function ProductItems() {
       </div>
       <div className="product__image-box-container">
         <div className="img3">
-          <div className="img3__numb">10</div>
+          <Number numb="10" />
           <div className="img3__text">
             Unprecedented <br /> ear cup <br /> headphones
           </div>
@@ -52,7 +56,7 @@ function ProductItems() {
         </div>
         <div className="img4">
           <img src={Headphones} alt="" />
-          <div className="img4__numb">10</div>
+          <Number numb="11" />
         </div>
       </div>
       <div className="headphones__container">

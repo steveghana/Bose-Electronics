@@ -1,9 +1,9 @@
 import React from "react";
 
-const DescriptionHead = () => {
+const DescriptionHead: React.FC<{ Head: string }> = ({ Head }) => {
   return (
     <div className="description__header">
-      <h1>Bose Dynamic</h1>
+      <h4>{Head}</h4>
       <div>Lorem ipsum</div>
     </div>
   );

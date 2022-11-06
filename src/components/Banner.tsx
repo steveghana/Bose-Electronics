@@ -1,4 +1,5 @@
 import React from 'react'
+import {Circle, Square, Traingle} from '../Widgets/Icons'
 function Banner() {
   return (
     <section className="banner__container">
@@ -8,8 +9,9 @@ function Banner() {
       <div >headphones?</div>
     </div>
     <div className="banner__triangle">
-      <div className="item_triangle"></div>
-      <div className="item_square"></div>
+  <Traingle/>
+  <Square/>
+  <Circle/>
     </div>
     <div className="banner__wrapper"></div>
   </section>

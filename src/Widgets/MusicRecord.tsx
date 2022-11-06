@@ -12,7 +12,15 @@ function MusicRecord() {
           <li className="music__nav-item">Soundlink</li>
           <li className="music__nav-item">Comfort</li>
           <li className="music__nav-item">Accesories</li>
-          <li className="music__nav-item">Prev</li>
+          <li className="music__nav-paginate">
+            <div>PREV</div>
+            <div className="pagination">
+              {new Array(3).fill("").map((item, i) => (
+                <div>{i + 1}</div>
+              ))}
+            </div>
+            <div>NEXT</div>
+          </li>
         </ul>
       </div>
       <div className="music__record-section">
@@ -20,16 +28,27 @@ function MusicRecord() {
           sup <br /> erstro <br /> ng
         </h2>
         <Play />
+        <div className="playlist">
+          <li>Soundlink</li>
+          <li>
+            <span></span> Quiet
+          </li>
+          <li>Soundlink</li>
+          <li>Soundlink</li>
+        </div>
+        <div className="line"></div>
         <h1 className="brand__text">BOSE</h1>
         <div className="music__concert"></div>
         <div className="disk__img">
           <img src={Disk} alt="Disk" />
         </div>
         <div className="disk__innerText">
-          <div>
-            Original styling music <span>soul</span>
+          <div className="text-wrapper">
+            <div>
+              Original styling music <span>soul</span>
+            </div>
+            <div>Believe that spirit</div>
           </div>
-          <div>Believe that spirit</div>
         </div>
       </div>
     </div>

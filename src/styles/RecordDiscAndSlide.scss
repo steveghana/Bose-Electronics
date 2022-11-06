@@ -139,32 +139,44 @@
       padding-bottom: 5rem;
       font-size: 0.9vw;
       align-items: center;
-      li {
+    }
+    &__nav-item {
+      position: relative;
+      overflow: hidden;
+      padding: 0.5rem 0;
+      &::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        background: white;
+        left: 0%;
+        bottom: 0%;
+        width: 50%;
+        translate: -110% 0;
+        transition: translate 300ms ease, color 300ms ease;
+      }
+      &:hover {
+        color: white;
         position: relative;
 
-        overflow: hidden;
-        padding: 0.5rem 0;
         &::before {
-          content: "";
-          position: absolute;
-          height: 2px;
-          background: white;
-          left: 0%;
-          bottom: 0%;
-          width: 50%;
-          translate: -110% 0;
-          transition: translate 300ms ease, color 300ms ease;
+          translate: 0% 0;
         }
-        &:hover {
+      }
+    }
+    &__nav-paginate {
+      margin: 0 auto;
+      display: flex;
+      translate: 5vw 0;
+      gap: 1rem;
+      div {
+        color: var(--dark-text);
+      }
+      .pagination {
+        display: flex;
+        gap: 0.5rem;
+        div:first-child {
           color: white;
-          position: relative;
-
-          &::before {
-            translate: 0% 0;
-          }
-        }
-        &:last-child {
-          margin-left: auto;
         }
       }
     }
@@ -175,6 +187,49 @@
       display: flex;
       margin-bottom: 9rem;
       width: 100%;
+      .playlist {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        // margin-top: 13vh;
+
+        color: rgb(172, 172, 172);
+        font-size: smaller;
+        width: 12vw;
+        position: absolute;
+        height: 2px;
+        z-index: 334;
+        inset: -85px 0 0 40vw;
+        margin: auto;
+
+        li {
+          font-weight: 100;
+          text-shadow: 1px 2px 2rem black;
+        }
+        li:first-child {
+          color: var(--dark-text);
+        }
+        li:nth-child(2) {
+          color: white;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          span {
+            width: 34px;
+            height: 2px;
+            background-color: var(--main);
+          }
+        }
+      }
+      .line {
+        width: 12vw;
+        position: absolute;
+        height: 2px;
+        z-index: 334;
+        background-color: var(--main);
+        inset: 5px 0 0 14vw;
+        margin: auto;
+      }
       .super__strong {
         width: 3.5vw;
         padding: 1.2rem;
@@ -192,10 +247,10 @@
         color: var(--main);
         rotate: 90deg;
         padding: 0%;
-        font-size: 12rem;
+        font-size: 14rem;
         position: absolute;
-        right: -160px;
-        top: 27vh;
+        right: -200px;
+        top: 17vh;
       }
 
       &::before {
@@ -238,7 +293,7 @@
         left: -7%;
         mix-blend-mode: luminosity;
         bottom: 27%;
-        background-image: url(../assets/designs/pexels-mantas-hesthaven-354304.jpg);
+        background-image: url(../assets/designs/monster-children-starcrawler-growlers-dougal-gorman-9-of-31.jpg);
         background-position: left;
         background-repeat: no-repeat;
         background-size: contain;
@@ -286,10 +341,13 @@
         inset: 29vh 0 0 49vw;
         margin: auto;
         width: 20vw;
-        display: flex;
-        gap: 2rem;
         font-size: smaller;
         color: white;
+        .text-wrapper {
+          display: flex;
+          // width: 100%;
+          gap: 1rem;
+        }
         ::after {
           content: "";
           position: absolute;
@@ -327,8 +385,8 @@
         }
       }
     }
-    &__cat-wrapper:nth-child(2) {
-      height: 40vh;
+    &__cat-wrapper {
+      height: 43vh;
     }
     &__cat-wrapper {
       display: flex;
@@ -336,11 +394,45 @@
       .music__player-img {
         width: 24vw;
         height: 100%;
-        background-image: url(../assets/designs/pexels-nardo-3574678.jpg);
+        background: url(../assets/designs/pexels-nardo-3574678.jpg);
         background-position: bottom;
+        scale: -1 1;
         mix-blend-mode: luminosity;
         background-repeat: no-repeat;
         background-size: cover;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          background: rgba($color: #000000, $alpha: 0.2);
+          inset: 0 0 0 0;
+          width: 100%;
+          height: 100%;
+        }
+
+        .text-wrapper {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          scale: -1 1;
+          bottom: 5%;
+          right: 5%;
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          scale: -1 1;
+          bottom: 5%;
+          right: 5%;
+          .border {
+            // padding: 0.3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            margin-right: auto;
+            border: 2px solid white;
+          }
+        }
       }
       .product__soundbar {
         padding: 1rem;
@@ -379,7 +471,7 @@
         p {
           font-size: x-small;
         }
-        h2 {
+        h3 {
           color: white;
         }
         div {
@@ -396,7 +488,7 @@
         display: flex;
         flex-direction: column;
         img {
-          margin-top: -2.4rem;
+          margin-top: -3.4rem;
           rotate: -30deg;
           translate: 0px 0px;
           width: 24vw;

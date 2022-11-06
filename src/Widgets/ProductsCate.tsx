@@ -1,16 +1,18 @@
 import React from "react";
 import Headset from "../assets/designs/headset.png";
 import Earbuds from "../assets/designs/cq5dam.web.320.320.png";
-import BluetoothSpeaker from "../assets/designs/wireless-speaker-loudspeaker-jbl-headphones-bose-soundlink-bluetooth-5fb7839b7d8056574bef2caef9280e11.png";
+import BluetoothSpeaker from "../assets/designs/Kleeo-increase-productivity.png";
+import { PlayArrow } from "@material-ui/icons";
 import Button from "./Button";
+import { Number } from "./Icons";
 function Text() {
   return (
     <div className="text">
       <p>Lorem ipsum</p>
-      <h2>
+      <h3>
         Sounduch 300 <br />
         soundbar{" "}
-      </h2>
+      </h3>
       <div>lorem ipsum</div>
       <Button color="white" />
     </div>
@@ -23,9 +25,9 @@ function ProductsCate() {
         <div className="product__cat-wrapper">
           <div className="earbuds">
             <div className="text">
-              <h2>
+              <h3>
                 Shock wave <br /> audio
-              </h2>
+              </h3>
               <p>lorem ipsum</p>
             </div>
             <img src={Earbuds} alt="" />
@@ -38,7 +40,17 @@ function ProductsCate() {
           </div>
         </div>
         <div className="product__cat-wrapper">
-          <div className="music__player-img"></div>
+          <div className="music__player-img">
+            <Number flip={true} numb={"05"} />
+            <div className="text-wrapper">
+              <div className="border">
+                <PlayArrow style={{ fontSize: "10px" }} />
+              </div>
+              <div>
+                Artistery game <br /> had never
+              </div>
+            </div>
+          </div>
           <div className="product__soundbar">
             <div className="soundbar__img">
               {" "}

@@ -1,8 +1,43 @@
 .description {
   &__container {
     display: flex;
-    height: 100vh;
+    height: 130vh;
     width: 100%;
+  }
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    .icon-wrapper {
+      text-align: center;
+      .contact-text {
+        visibility: hidden;
+      }
+
+      &:hover {
+        .contact-text {
+          visibility: visible;
+          font-size: x-small;
+          color: var(--fade-text);
+        }
+        .contact_icon {
+          transition: all 1s ease;
+          border: 1px solid white;
+          // .contact-text {
+          //   display: block;
+          // }
+        }
+      }
+    }
+    .contact_icon {
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+    }
   }
   &__right {
     width: 30%;
@@ -16,23 +51,24 @@
     display: flex;
     flex-direction: column;
     &-top {
-      background: url(../assets/designs/pexels-callum-hilton-7856680.jpg);
+      background: url(../assets/designs/mymanu-clik-earphone-designboom-07.jpg);
+      background-position: center;
     }
     &-bottom {
-      background: url(../assets/designs/pexels-philip-boakye-2614384.jpg);
+      background: url(../assets/designs/artworks-000337069908-ikocd6-t500x500.jpg);
+      background-position: left top;
     }
 
     &-top,
     &-bottom {
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center;
       position: relative;
       &::before {
         content: "";
         width: 100%;
         height: 100%;
-        background: rgba($color: black, $alpha: 0.4);
+        background: rgba($color: black, $alpha: 0.1);
         position: absolute;
         z-index: 4354;
         inset: 0 0 0 0;
@@ -61,12 +97,12 @@
     .absolute {
       height: 70%;
       width: 70%;
-      background: url(../assets/designs/cq5dam.jpeg);
+      background: url(../assets/designs/ear.jpg);
       position: absolute;
       top: -20%;
       z-index: 45;
       left: 0%;
-      background-position: -30px 0px;
+      background-position: -0px 0px;
       background-repeat: no-repeat;
       box-shadow: 1px 1px 15px rgba($color: #000000, $alpha: 0.2);
       background-size: cover;
@@ -82,12 +118,17 @@
   &__text-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 1rem;
   }
   &__img {
     height: 100%;
-    width: 100px;
-    background-color: white;
+    width: 80px;
+    background-image: url(../assets/designs/pngwing.com.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
   }
   &__text-wrapper {
     display: flex;
@@ -95,18 +136,9 @@
     flex-direction: column;
     flex-grow: 1;
     p {
-      font-size: x-small;
-    }
-  }
-
-  &__header {
-    padding-bottom: 1rem;
-    border-bottom: 1px solid white;
-    h1 {
-      font-size: larger;
-    }
-    div {
-      font-size: smaller;
+      font-size: xx-small;
+      color: var(--fade-text);
+      opacity: 0.7;
     }
   }
 }

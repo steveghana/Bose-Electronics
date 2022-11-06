@@ -1,7 +1,6 @@
 import React from "react";
-import BudsOntable from "../assets/designs/pexels-callum-hilton-7856680.jpg";
-import Kelly from "../assets/designs/pexels-philip-boakye-2614384.jpg";
 import DescriptionHead from "../Widgets/DescriptionHead";
+import { Email, QuestionAnswer, Hearing } from "@material-ui/icons";
 function Description() {
   return (
     <div className="description__container">
@@ -10,10 +9,10 @@ function Description() {
         <div className="description__left-bottom"></div>
       </div>
       <div className="description__center">
-        <DescriptionHead />
+        <DescriptionHead Head="Boss Dynamic" />
         {new Array(2).fill("").map((item, i) => (
           <div className="description__text-container">
-            <div className="description__img">.</div>
+            <div className="description__img"></div>
             <div className="description__text-wrapper" key={i}>
               <h4>Bose something</h4>
               <p>
@@ -25,6 +24,20 @@ function Description() {
             </div>
           </div>
         ))}
+        {new Array(3).fill("").map((item, i) => (
+          <div className="description__text-container">
+            <h5 style={{ width: "100px" }}>{`. [Bose]`}</h5>
+            <div className="description__text-wrapper" key={i}>
+              <p>Lorem ipsum dolor sit amet consectetur .</p>
+            </div>
+          </div>
+        ))}
+        <DescriptionHead Head="Contact Bose" />
+        <div className="description__icons">
+          <Icon Type={QuestionAnswer} /> <Icon Type={Email} />{" "}
+          <Icon Type={Hearing} />{" "}
+        </div>
+        <DescriptionHead Head="More Products" />
       </div>
       <div className="description__right">
         <div className="absolute"></div>
@@ -32,5 +45,15 @@ function Description() {
     </div>
   );
 }
+const Icon: React.FC<{ Type: any }> = ({ Type }) => {
+  return (
+    <div className="icon-wrapper">
+      <div className="contact_icon">
+        <Type style={{ fontSize: "13px" }} />
+      </div>
+      <div className="contact-text">Ipsum</div>
+    </div>
+  );
+};
 
 export default Description;

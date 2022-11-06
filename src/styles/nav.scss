@@ -19,7 +19,8 @@
     height: 100%;
     font-size: smaller;
     position: relative;
-    color: white;
+    color: var(--fade-text);
+    font-size: x-small;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -27,12 +28,13 @@
   }
   &_dot {
     position: absolute;
-    bottom: 20%;
+    bottom: 10%;
+    font-size: x-small;
     left: 38%;
   }
   li span,
   li div {
-    color: white;
+    color: var(--fade-text);
   }
   &__list-container li:nth-child(4) span {
     padding-left: 0.4rem;

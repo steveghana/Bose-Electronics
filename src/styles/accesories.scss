@@ -1,12 +1,14 @@
 .accesories {
   &__container {
     width: 100%;
-    height: 59vh;
+    height: 55vh;
     display: flex;
     align-items: center;
   }
+
   &__right {
     width: 60%;
+    background-color: #4d36ff;
     position: relative;
     overflow: hidden;
     height: 100%;
@@ -21,13 +23,11 @@
       border: 5px solid var(--main);
     }
     img {
-      background-color: white;
       object-fit: cover;
-      object-position: left;
-      translate: 40px 0;
-      width: 50vw;
+      object-position: center;
+      translate: -100px 0;
+      width: 80vw;
       z-index: 14;
-      padding: 1rem;
       height: 100%;
     }
   }
@@ -53,6 +53,15 @@
       width: 100%;
       height: 100%;
       background-color: rgba($color: #503af5, $alpha: 0.7);
+      inset: 0 0 0 0;
+    }
+    .text-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: absolute;
       inset: 0 0 0 0;
     }
   }
@@ -82,6 +91,23 @@
       #424242,
       #3d3d3d
     );
+    position: relative;
+    .number {
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      font-size: xx-small;
+    }
+    .icon {
+      position: absolute;
+      inset: 0 0 0 0;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
     .jack {
       object-fit: cover;
       object-position: left;
@@ -102,7 +128,7 @@
     height: 80vh;
     margin-left: auto;
     position: relative;
-    background: url(../assets/designs/bars.jpg);
+    background: url(../assets/designs/a4e5cd67-1a1a-4dff-a0b2-bdd3cd0014a3_rwc_0x0x1795x1200x1795.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -177,6 +203,7 @@
         }
       }
       .img1 {
+        position: relative;
         &::before {
           content: "";
           width: 100%;
@@ -188,10 +215,21 @@
         img {
           mix-blend-mode: luminosity;
         }
+        &__square {
+          position: absolute;
+          z-index: 3;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          inset: 0 0 0 0;
+          margin: auto;
+        }
       }
       .img2 img {
-        object-position: top;
-        object-fit: contain;
+        // object-position: top;
+        object-fit: cover;
         background: rgb(41, 41, 41);
       }
       img {
@@ -233,17 +271,8 @@
     &::before {
       content: "";
       width: 100%;
-      background: linear-gradient(
-        to right,
-        #4d36ff,
-        #5742fd,
-        #634ffa,
-        #5d48ff,
-        #7461ff,
-        #8271ff,
-        #8c7dff
-      );
-      opacity: 0.5;
+      background: blue;
+      opacity: 0.6;
 
       position: absolute;
       inset: 0 0 0 0;
@@ -252,7 +281,7 @@
     img {
       object-fit: cover;
       background-color: #222121;
-      object-position: -1vw 19px;
+      // object-position: -1vw 19px;
       width: 100%;
       height: 100%;
     }
@@ -265,7 +294,7 @@
     img {
       object-fit: cover;
       background-color: #222121;
-      object-position: top;
+      // object-position: top;
       width: 100%;
       height: 100%;
     }
