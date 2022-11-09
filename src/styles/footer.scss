@@ -134,7 +134,7 @@
   }
   &__bottom {
     display: flex;
-    padding: 1em 0;
+    padding: 1em;
     width: 86%;
     @include respond(small-tablet) {
       width: 100%;
@@ -151,6 +151,9 @@
     margin: auto auto 0 auto;
     translate: 3vw 0;
     align-self: flex-end;
+    .copyright {
+      margin: auto;
+    }
     .logo img {
       width: 100px;
     }

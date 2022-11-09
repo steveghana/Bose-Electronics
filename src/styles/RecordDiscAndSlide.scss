@@ -287,7 +287,7 @@
         color: var(--main);
         rotate: 90deg;
         padding: 0%;
-        font-size: 14rem;
+        font-size: 15rem;
         position: absolute;
         @include respond(tablet-landscape) {
           font-size: 11rem;
@@ -295,11 +295,11 @@
         }
         @include respond(small-tablet) {
           font-size: 5rem;
-          right: -73px;
+          right: -44px;
           top: 70px;
         }
         right: -18vw;
-        top: 17vh;
+        top: 30vh;
       }
 
       &::before {
@@ -345,17 +345,18 @@
         position: absolute;
         left: -7vw;
         mix-blend-mode: luminosity;
-        bottom: 27%;
+        bottom: 27vh;
         background-image: url(../assets/designs/monster-children-starcrawler-growlers-dougal-gorman-9-of-31.jpg);
         background-position: left;
         background-repeat: no-repeat;
         background-size: contain;
-        @include respond(tablet-landscape) {
+        @include respond(tablet-portrait) {
           left: -21%;
+          bottom: 18vh;
         }
         @include respond(small-tablet) {
           left: -25%;
-          bottom: -28%;
+          bottom: -8vh;
         }
       }
       .disk__img {
@@ -422,8 +423,8 @@
             height: 15vh;
           }
           @include respond(small-tablet) {
-            height: 10vh;
-            inset: 7vh 5vw 0 0;
+            height: 8vh;
+            inset: 9vh 15vw 0 0;
           }
           inset: 47vh 5vw 0 0;
           z-index: 1000;

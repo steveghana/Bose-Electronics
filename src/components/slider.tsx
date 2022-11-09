@@ -10,8 +10,8 @@ function Slider() {
   return (
     <div ref={sliderBar} className="slide__container">
       <Swiper
-        slidesPerView="auto"
-        spaceBetween={1}
+        slidesPerView={4}
+        spaceBetween={2}
         freeMode
         centeredSlides
         centeredSlidesBounds

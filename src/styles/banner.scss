@@ -35,7 +35,7 @@
     padding: 5rem 0 0 17vw;
     @include respond(small-tablet) {
       padding: 1rem;
-      padding-left: 1.4vw;
+      padding-left: 2.6vw;
       font-size: 2rem;
     }
     display: flex;
@@ -46,7 +46,7 @@
   }
   &__triangle {
     margin: auto auto auto 0;
-    // width: 200px;
+
     gap: 3rem;
     position: relative;
     display: flex;
