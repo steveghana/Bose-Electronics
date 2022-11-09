@@ -1,6 +1,11 @@
 /* Slider */
+@import "./mixins";
 .slider {
   max-width: 83vw;
+  @include respond(small-tablet) {
+    max-width: 100%;
+    margin: auto;
+  }
   margin-top: -7rem;
   display: flex;
   flex-direction: column;
@@ -8,11 +13,19 @@
   &__item-wrapper {
     display: flex;
     justify-content: flex-end;
+    @include respond(small-tablet) {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
   &__container {
     height: 360px;
     width: calc(83vw / 4);
     position: relative;
+    @include respond(small-tablet) {
+      width: 100%;
+      margin: auto;
+    }
   }
   &__container:hover {
     transition: all 1s ease;
@@ -59,6 +72,10 @@
     background: #161616;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include respond(small-tablet) {
+      background-position: center !important;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -73,20 +90,33 @@
     background-image: url(../assets/designs/pexels-pavel-danilyuk-8001060.jpg);
     background-position: -220px -0px;
     mix-blend-mode: luminosity;
+    @include respond(small-tablet) {
+      mix-blend-mode: unset;
+    }
   }
   &__container:nth-child(2) &__img {
     background-image: url(../assets/designs/pexels-ardian-lutfi-9939409.jpg);
     background-position: -10px 50px;
     mix-blend-mode: luminosity;
+    @include respond(small-tablet) {
+      background-position: top !important;
+      mix-blend-mode: unset;
+    }
   }
   &__container:nth-child(3) &__img {
     background-image: url(../assets/designs/pexels-sound-on-3756943.jpg);
     mix-blend-mode: luminosity;
+    @include respond(small-tablet) {
+      mix-blend-mode: unset;
+    }
   }
   &__container:nth-child(4) &__img {
     background-image: url(../assets/designs/pexels-caique-nascimento-1396538.jpg);
     background-position: center;
     mix-blend-mode: luminosity;
+    @include respond(small-tablet) {
+      mix-blend-mode: unset;
+    }
   }
 
   &__text {
@@ -138,6 +168,10 @@
       padding: 2.4rem 1.4rem;
       padding-bottom: 5rem;
       font-size: 0.9vw;
+      @include respond(small-tablet) {
+        font-size: 10px;
+        gap: 1rem;
+      }
       align-items: center;
     }
     &__nav-item {
@@ -168,6 +202,9 @@
       margin: 0 auto;
       display: flex;
       translate: 5vw 0;
+      @include respond(small-tablet) {
+        translate: 2vw 0;
+      }
       gap: 1rem;
       div {
         color: var(--dark-text);
@@ -186,6 +223,7 @@
       position: relative;
       display: flex;
       margin-bottom: 9rem;
+
       width: 100%;
       .playlist {
         display: flex;
@@ -201,7 +239,9 @@
         z-index: 334;
         inset: -85px 0 0 40vw;
         margin: auto;
-
+        @include respond(small-tablet) {
+          display: none;
+        }
         li {
           font-weight: 100;
           text-shadow: 1px 2px 2rem black;
@@ -249,7 +289,16 @@
         padding: 0%;
         font-size: 14rem;
         position: absolute;
-        right: -200px;
+        @include respond(tablet-landscape) {
+          font-size: 11rem;
+          right: -14vw;
+        }
+        @include respond(small-tablet) {
+          font-size: 5rem;
+          right: -73px;
+          top: 70px;
+        }
+        right: -18vw;
         top: 17vh;
       }
 
@@ -259,6 +308,10 @@
         z-index: 4;
         position: absolute;
         width: 21.5vw;
+        @include respond(small-tablet) {
+          width: 26vw;
+          height: 26vw;
+        }
         background: linear-gradient(
           to right,
           #585858,
@@ -290,13 +343,20 @@
         width: 84vw;
         height: 58vh;
         position: absolute;
-        left: -7%;
+        left: -7vw;
         mix-blend-mode: luminosity;
         bottom: 27%;
         background-image: url(../assets/designs/monster-children-starcrawler-growlers-dougal-gorman-9-of-31.jpg);
         background-position: left;
         background-repeat: no-repeat;
         background-size: contain;
+        @include respond(tablet-landscape) {
+          left: -21%;
+        }
+        @include respond(small-tablet) {
+          left: -25%;
+          bottom: -28%;
+        }
       }
       .disk__img {
         width: 100%;
@@ -342,21 +402,32 @@
         margin: auto;
         width: 20vw;
         font-size: smaller;
+        @include respond(small-tablet) {
+          inset: 9vh 0 0 49vw;
+          font-size: x-small;
+        }
         color: white;
         .text-wrapper {
           display: flex;
           // width: 100%;
           gap: 1rem;
         }
-        ::after {
+        &::after {
           content: "";
           position: absolute;
           background-color: var(--main);
           width: 4vw;
           height: 25vh;
+          @include respond(tablet-landscape) {
+            height: 15vh;
+          }
+          @include respond(small-tablet) {
+            height: 10vh;
+            inset: 7vh 5vw 0 0;
+          }
+          inset: 47vh 5vw 0 0;
           z-index: 1000;
           margin: auto;
-          inset: 45vh 5vw 0 0;
         }
         span {
           color: var(--main);
@@ -387,12 +458,22 @@
     }
     &__cat-wrapper {
       height: 43vh;
+      @include respond(small-tablet) {
+        height: 100%;
+      }
     }
     &__cat-wrapper {
       display: flex;
       width: 100%;
+      @include respond(small-tablet) {
+        flex-direction: column-reverse !important;
+      }
       .music__player-img {
         width: 24vw;
+        @include respond(small-tablet) {
+          height: 50vh;
+          width: 100%;
+        }
         height: 100%;
         background: url(../assets/designs/pexels-nardo-3574678.jpg);
         background-position: bottom;
@@ -451,6 +532,9 @@
         }
         .soundbar__img img {
           width: 30vw;
+          @include respond(small-tablet) {
+            width: 50vw;
+          }
         }
       }
       .soundbach__text {
@@ -466,6 +550,10 @@
           top: 0;
           margin-top: -2rem;
           right: 19vw;
+          @include respond(small-tablet) {
+            margin-top: 0rem;
+            width: 250px;
+          }
           width: 350px;
         }
         p {
@@ -473,6 +561,9 @@
         }
         h3 {
           color: white;
+          @include respond(small-tablet) {
+            font-size: smaller;
+          }
         }
         div {
           color: black;
@@ -487,8 +578,23 @@
         padding: 2rem 0 2rem 2rem;
         display: flex;
         flex-direction: column;
+        @include respond(small-tablet) {
+          padding: 2rem 0 2rem 2rem;
+          flex-direction: row;
+          align-items: center;
+          width: 100%;
+          font-size: smaller;
+          div,
+          p {
+            color: black !important;
+          }
+        }
         img {
           margin-top: -3.4rem;
+          @include respond(small-tablet) {
+            margin-top: 0;
+            width: 64vw;
+          }
           rotate: -30deg;
           translate: 0px 0px;
           width: 24vw;

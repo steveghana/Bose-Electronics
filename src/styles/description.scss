@@ -1,9 +1,16 @@
+@import "./mixins";
 .description {
   &__container {
     display: flex;
-    height: 130vh;
+    height: auto;
+    // padding-bottom: 5rem;
     width: 100%;
+    @include respond(small-tablet) {
+      flex-direction: column;
+      height: auto;
+    }
   }
+
   &__icons {
     display: flex;
     justify-content: space-between;
@@ -22,9 +29,6 @@
         .contact_icon {
           transition: all 1s ease;
           border: 1px solid white;
-          // .contact-text {
-          //   display: block;
-          // }
         }
       }
     }
@@ -40,15 +44,25 @@
     }
   }
   &__right {
+    @include respond(small-tablet) {
+      width: 100%;
+      height: 100vh;
+    }
     width: 30%;
   }
   &__left,
   &__center {
     width: calc(70% / 2);
+    @include respond(small-tablet) {
+      width: 100%;
+    }
   }
 
   &__left {
     display: flex;
+    @include respond(small-tablet) {
+      height: 100vh;
+    }
     flex-direction: column;
     &-top {
       background: url(../assets/designs/mymanu-clik-earphone-designboom-07.jpg);
@@ -106,6 +120,14 @@
       background-repeat: no-repeat;
       box-shadow: 1px 1px 15px rgba($color: #000000, $alpha: 0.2);
       background-size: cover;
+      @include respond(small-tablet) {
+        background-size: contain;
+        position: relative;
+        top: 0%;
+        margin: auto;
+        height: 46%;
+        max-width: 40%;
+      }
     }
   }
   &__center {
@@ -113,23 +135,55 @@
     padding: 3rem;
     display: flex;
     flex-direction: column;
+    padding-bottom: 10rem;
+    @include respond(small-tablet) {
+      padding-bottom: 4rem;
+    }
     gap: 1.4rem;
+    .moreproduct {
+      &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        div:first-child {
+          background-image: url(../assets/designs/570bac28121259.6022746667033.jpg);
+        }
+        div:nth-child(2) {
+          background-image: url(../assets/designs/mpow.jpg);
+        }
+        div:nth-child(3) {
+          background-image: url(../assets/designs/dualheadphones.png);
+        }
+        div:nth-child(4) {
+          background-image: url(../assets/designs/5f364328121259.6024aff6be03f.jpg);
+        }
+        div {
+          width: 23%;
+          height: 70px;
+          background-repeat: no-repeat;
+          background-color: #000000;
+          background-position: top;
+          background-size: cover;
+        }
+      }
+    }
   }
   &__text-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    img {
+      height: 80px;
+      width: 80px;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: black;
+    }
   }
-  &__img {
-    height: 100%;
-    width: 80px;
-    background-image: url(../assets/designs/pngwing.com.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: black;
-  }
+
   &__text-wrapper {
     display: flex;
     width: 100%;

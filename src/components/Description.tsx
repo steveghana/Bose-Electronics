@@ -1,5 +1,7 @@
 import React from "react";
 import DescriptionHead from "../Widgets/DescriptionHead";
+import Im1 from "../assets/designs/airpods-apple-earbuds.png";
+import Im2 from "../assets/designs/pngwing.com.png";
 import { Email, QuestionAnswer, Hearing } from "@material-ui/icons";
 function Description() {
   return (
@@ -10,10 +12,10 @@ function Description() {
       </div>
       <div className="description__center">
         <DescriptionHead Head="Boss Dynamic" />
-        {new Array(2).fill("").map((item, i) => (
-          <div className="description__text-container">
-            <div className="description__img"></div>
-            <div className="description__text-wrapper" key={i}>
+        {[Im1, Im2].map((item, i) => (
+          <div className="description__text-container" key={i}>
+            <img src={item} alt="" />
+            <div className="description__text-wrapper">
               <h4>Bose something</h4>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -38,6 +40,11 @@ function Description() {
           <Icon Type={Hearing} />{" "}
         </div>
         <DescriptionHead Head="More Products" />
+        <div className="moreproduct__container">
+          {new Array(4).fill("").map((item, i) => (
+            <div key={i} className="moreproduct__imgs"></div>
+          ))}
+        </div>
       </div>
       <div className="description__right">
         <div className="absolute"></div>

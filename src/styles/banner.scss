@@ -1,4 +1,5 @@
 /* Banner */
+@import "./_mixins.scss";
 .banner {
   &__container {
     width: 100%;
@@ -19,6 +20,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     mix-blend-mode: luminosity;
+    @include respond(small-tablet) {
+      padding: 1rem;
+      font-size: 2rem;
+    }
   }
   &__text-container {
     font-size: 4rem;
@@ -28,9 +33,14 @@
     background-color: transparent;
     margin: auto auto auto 0;
     padding: 5rem 0 0 17vw;
+    @include respond(small-tablet) {
+      padding: 1rem;
+      padding-left: 1.4vw;
+      font-size: 2rem;
+    }
     display: flex;
     div {
-      z-index: 4544;
+      z-index: 4;
       color: var(--main) !important;
     }
   }
@@ -42,6 +52,9 @@
     display: flex;
     align-items: center;
     translate: -30px 120px;
-    
+    @include respond(small-tablet) {
+      translate: -40% 120px;
+      margin: auto !important;
+    }
   }
 }

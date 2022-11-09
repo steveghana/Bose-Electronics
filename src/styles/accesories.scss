@@ -1,14 +1,21 @@
+@import "./mixins";
 .accesories {
   &__container {
     width: 100%;
     height: 55vh;
     display: flex;
     align-items: center;
+    @include respond(small-tablet) {
+      flex-direction: column;
+      height: auto;
+    }
   }
 
   &__right {
     width: 60%;
-    background-color: #4d36ff;
+    @include respond(small-tablet) {
+      width: 100%;
+    }
     position: relative;
     overflow: hidden;
     height: 100%;
@@ -21,18 +28,35 @@
       margin: auto;
       height: 90%;
       border: 5px solid var(--main);
+      @include respond(small-tablet) {
+        height: 80%;
+        translate: 0 0;
+      }
     }
     img {
-      object-fit: cover;
       object-position: center;
       translate: -100px 0;
       width: 80vw;
       z-index: 14;
+      object-fit: cover;
       height: 100%;
+      @include respond(small-tablet) {
+        width: 100vw;
+        height: auto;
+        object-fit: contain;
+        margin-bottom: auto;
+        translate: 0 0;
+      }
     }
   }
   &__left {
     width: 45%;
+    @include respond(small-tablet) {
+      width: 100%;
+
+      background-color: red;
+    }
+
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -44,9 +68,16 @@
   }
   &__bottom {
     height: 40%;
+    @include respond(small-tablet) {
+      height: 30vh;
+      flex-grow: 1;
+    }
+
     width: 100%;
     position: relative;
     background: url(../assets/designs/aec.jpg);
+    background-position: center;
+    background-size: contain;
     &::before {
       content: "";
       position: absolute;
@@ -68,10 +99,17 @@
   &__top {
     display: flex;
     height: 60%;
+    @include respond(small-tablet) {
+      height: auto;
+    }
     width: 100%;
+    justify-content: space-between;
     background-color: aqua;
     div:nth-child(2) {
-      background-size: contain;
+      background-size: cover;
+      @include respond(small-tablet) {
+        width: 100%;
+      }
       background-position: center;
       background-repeat: no-repeat;
       img {
@@ -111,6 +149,9 @@
     .jack {
       object-fit: cover;
       object-position: left;
+      @include respond(small-tablet) {
+        object-position: center;
+      }
     }
     img:nth-child(2) {
       object-fit: contain;
@@ -127,6 +168,11 @@
     width: var(--trimed-width);
     height: 80vh;
     margin-left: auto;
+    @include respond(small-tablet) {
+      height: auto;
+      width: 100%;
+      margin: auto;
+    }
     position: relative;
     background: url(../assets/designs/a4e5cd67-1a1a-4dff-a0b2-bdd3cd0014a3_rwc_0x0x1795x1200x1795.jpg);
     background-position: center;
@@ -138,6 +184,10 @@
     justify-content: space-between;
     width: 100%;
     height: 59%;
+    @include respond(small-tablet) {
+      flex-direction: column;
+      height: auto;
+    }
     &::before {
       content: "";
       width: 100%;
@@ -153,15 +203,23 @@
     z-index: 3;
     flex-direction: column;
     padding-left: 3rem;
+    @include respond(small-tablet) {
+      padding: 1rem;
+      align-items: center;
+      max-width: 100%;
+      text-align: center;
+    }
     justify-content: center;
     margin: auto;
-    max-width: 40%;
     gap: 1rem;
     align-items: flex-start;
   }
   &__text-left {
     p {
       padding-top: 4rem;
+      @include respond(small-tablet) {
+        padding: 1rem;
+      }
     }
     h2 div {
       color: var(--main);
@@ -173,6 +231,9 @@
     }
     .btn {
       margin-top: 5rem;
+      @include respond(small-tablet) {
+        margin: 4rem auto 3rem auto;
+      }
     }
   }
   &__image-container {
@@ -180,19 +241,30 @@
     pointer-events: none;
     width: 65%;
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     position: absolute;
+    @include respond(small-tablet) {
+      height: 40vh;
+      margin: auto;
+      width: 100%;
+      position: relative;
+    }
     bottom: 0vh;
     left: 0%;
     .imgcontainer {
       margin-top: auto;
       height: 50%;
+      @include respond(small-tablet) {
+        height: 100%;
+      }
+
       display: flex;
       width: 100%;
       .img1,
       .img2 {
         width: 50%;
         height: 100%;
+
         position: relative;
         &__numb {
           top: 3%;
@@ -246,18 +318,21 @@
   display: flex;
   margin-left: auto;
   position: relative;
+  @include respond(small-tablet) {
+    width: 100%;
+  }
   .img3,
   .img4 {
     max-height: 40vh;
-    &__numb {
-      position: absolute;
-      top: 3%;
-      right: 3%;
-      font-size: smaller;
+    @include respond(small-tablet) {
+      max-height: 100%;
     }
   }
   .img3 {
     width: 32.5%;
+    @include respond(small-tablet) {
+      width: 100%;
+    }
     position: relative;
     &__text {
       position: absolute;
@@ -281,20 +356,30 @@
     img {
       object-fit: cover;
       background-color: #222121;
-      // object-position: -1vw 19px;
       width: 100%;
       height: 100%;
     }
   }
   .img4 {
     position: absolute;
+    @include respond(small-tablet) {
+      position: relative;
+      width: 100%;
+      right: 0;
+    }
+    .number {
+      @include respond(small-tablet) {
+        display: none;
+      }
+    }
     width: 28%;
     height: 100%;
     right: 6vw;
     img {
       object-fit: cover;
       background-color: #222121;
-      // object-position: top;
+      object-position: right;
+
       width: 100%;
       height: 100%;
     }
@@ -307,9 +392,21 @@
     justify-content: flex-start;
     gap: 2.5vw;
     margin-left: auto;
+    @include respond(small-tablet) {
+      width: 100%;
+      gap: 0.5vw;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+
     img {
       width: 30vw;
-      height: 400px;
+      @include respond(small-tablet) {
+        height: 280px;
+        width: 100%;
+      }
+
+      height: 500px;
       object-position: bottom;
       object-fit: contain;
       padding-top: 5rem;
@@ -319,6 +416,10 @@
     display: flex;
     flex-direction: column;
     translate: 0 -5vh;
+    @include respond(small-tablet) {
+      translate: 0 0vh;
+    }
+
     margin: auto 0;
     gap: 1em;
     justify-content: center;

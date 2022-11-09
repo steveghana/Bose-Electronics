@@ -1,7 +1,46 @@
+@import "./mixins";
 .slide {
   &__container {
     height: 40vh;
     width: 100%;
-    background-color: gray;
+
+    img {
+      width: 50px;
+      margin: auto 0;
+      pointer-events: none;
+    }
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0;
+    .price {
+      display: flex;
+      gap: 0.3rem;
+    }
+    div:first-child {
+      font-size: xx-small;
+    }
+    div {
+      color: black;
+    }
+    span {
+      color: var(--fade-text);
+      font-size: smaller;
+      font-weight: bolder;
+    }
+  }
+  &__items {
+    height: 100%;
+    cursor: grab;
+    width: 70%;
+    @include respond(small-tablet) {
+      width: 100%;
+    }
+    margin: auto;
+    display: flex;
   }
 }

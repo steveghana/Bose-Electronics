@@ -1,4 +1,6 @@
 /*======= APP-BAR ========*/
+@import "./_mixins.scss";
+
 .nav {
   position: absolute;
   z-index: 34;
@@ -7,11 +9,18 @@
   &__container,
   &__list-container {
     height: 80px;
+    @include respond(small-tablet) {
+      height: 50px;
+    }
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
   &__list-container {
     width: 100%;
+    @include respond(small-tablet) {
+      display: none;
+    }
   }
 
   li {
@@ -42,7 +51,10 @@
   &__list-logo {
     padding: 1rem 0;
     width: 20vw;
-
+    @include respond(small-tablet) {
+      width: auto;
+      padding: 1rem;
+    }
     background-color: white;
     img {
       width: 100px;

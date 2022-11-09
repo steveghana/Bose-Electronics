@@ -118,9 +118,13 @@ body {
   z-index: 3;
   font-size: xx-small;
 }
+
 .description__header {
   padding-bottom: 1rem;
   border-bottom: 1px solid white;
+  @include respond(small-tablet) {
+    text-align: center;
+  }
   h1 {
     font-size: larger;
   }
