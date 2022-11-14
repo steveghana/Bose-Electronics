@@ -9,33 +9,73 @@ function Nav() {
         <li className="nav__list-logo">
           <img src={Logo} alt="logo" />
         </li>
-        <li className="nav__list-search">
-          <Search />
-        </li>
+        <button className="nav__list-search button button--calypso">
+          <span>
+            <Search />
+          </span>
+        </button>
         <div className="nav__list-container">
-          <li className="nav__list-item">
-            item
-            <div className="nav_dot">+</div>
-          </li>
-          <li className="nav__list-item">
-            item
-            <div className="nav_dot">+</div>
-          </li>
-          <li className="nav__list-item">
-            item
-            <div className="nav_dot">+</div>
-          </li>
-          <li className="nav__list-item">
-            Boss <span>item</span>
-          </li>
-          <li className="nav__list-item">item</li>
-          <li className="nav__list-message-icon">
-            <MessageOutlined fontSize="small" />
-          </li>
-          <li className="nav__list-location-icon">
-            <LocationOnOutlined fontSize="small" />
-          </li>
-          <li className="nav__list-lang">En / Ch</li>
+          <button className="nav__list-item letstalk_btn_button button--telesto  hide_cursor">
+            <span>
+              <span>
+                item
+                <div className="nav_dot">+</div>
+              </span>
+            </span>
+          </button>
+          <button className="nav__list-item letstalk_btn_button button--telesto  hide_cursor">
+            <span>
+              <span>
+                item
+                <div className="nav_dot">+</div>
+              </span>
+            </span>
+          </button>
+          <button className="nav__list-item letstalk_btn_button button--telesto  hide_cursor">
+            <span>
+              <span>
+                item
+                <div className="nav_dot">+</div>
+              </span>
+            </span>
+          </button>
+          <button className="nav__list-item letstalk_btn_button button--telesto  hide_cursor">
+            <span>
+              <span>
+                item
+                <div className="nav_dot">+</div>
+              </span>
+            </span>
+          </button>
+          <button className="nav__list-item letstalk_btn_button button--telesto  hide_cursor">
+            <span>
+              <span>Bose item</span>
+            </span>
+          </button>
+          <button className="nav__list-item letstalk_btn_button button--telesto  hide_cursor">
+            <span>
+              <span>item</span>
+            </span>
+          </button>
+          <button className="nav__list-item letstalk_btn_button button--telesto  hide_cursor">
+            <span>
+              <span>
+                <MessageOutlined fontSize="small" />
+              </span>
+            </span>
+          </button>
+          <button className="nav__list-item letstalk_btn_button button--telesto  hide_cursor">
+            <span>
+              <span>
+                <LocationOnOutlined fontSize="small" />
+              </span>
+            </span>
+          </button>
+          <button className="nav__list-item letstalk_btn_button button--telesto  hide_cursor">
+            <span>
+              <span>En / Ch</span>
+            </span>
+          </button>
         </div>
       </ul>
     </nav>

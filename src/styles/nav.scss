@@ -1,6 +1,175 @@
 /*======= APP-BAR ========*/
 @import "./_mixins.scss";
+.button--calypso {
+  overflow: hidden;
+  font-family: freight-display-pro, serif;
+  font-size: 1.15rem;
+  position: relative;
+  color: #fff;
+  background-color: transparent;
+  height: 100%;
+  border: 1px solid rgba($color: #ffffff, $alpha: 0.05);
+}
 
+.button--calypso span {
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+
+.button--calypso:hover span {
+  animation: MoveScaleUpInitial 0.3s forwards, MoveScaleUpEnd 0.3s forwards 0.3s;
+}
+
+@keyframes MoveScaleUpInitial {
+  to {
+    transform: translate3d(0, -105%, 0) scale3d(1, 2, 1);
+    opacity: 0;
+  }
+}
+
+@keyframes MoveScaleUpEnd {
+  from {
+    transform: translate3d(0, 100%, 0) scale3d(1, 2, 1);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.button--calypso::before {
+  content: "";
+  background-color: var(--main);
+  width: 140%;
+  position: absolute;
+  height: 140%;
+  padding-bottom: 120%;
+  top: -20%;
+  left: -20%;
+  border-radius: 50%;
+  transform: translate3d(0, 68%, 0) scale3d(0, 0, 0);
+}
+
+.button--calypso:hover::before {
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+.button--calypso::after {
+  content: "";
+  background: #000;
+  transform: translate3d(0, -100%, 0);
+  transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+.button--calypso:hover::after {
+  transform: translate3d(0, 0, 0);
+  transition-duration: 0.05s;
+  transition-delay: 0.4s;
+  transition-timing-function: linear;
+}
+
+.button--telesto,
+.about_button--telesto {
+  overflow: hidden;
+  font-family: "Century Gothic";
+  font-weight: 800;
+  font-style: italic;
+  position: relative;
+  height: 100%;
+  font-size: x-small;
+  background-color: transparent;
+  border: 1px solid rgba($color: #ffffff, $alpha: 0.05);
+  cursor: pointer;
+}
+
+.button--telesto span,
+.about_button--telesto span {
+  display: block;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+.button--telesto > span,
+.about_button--telesto > span {
+  overflow: hidden;
+}
+
+.button--telesto > span > span {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.about_button--telesto:hover > span > span,
+.button--telesto:hover > span > span {
+  animation: MoveRightInitial 0.1s forwards, MoveRightEnd 0.3s forwards 0.2s;
+}
+.about_button--telesto:hover > span > span {
+  color: rgb(255, 255, 255);
+}
+@keyframes MoveRightInitial {
+  to {
+    transform: translate3d(105%, 0, 0);
+  }
+}
+@keyframes MoveRightEnd {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.button--telesto::before,
+.button--telesto::after {
+  content: "";
+  background: var(--main);
+  position: absolute;
+  inset: 0 0 0 0;
+  margin: auto;
+  // z-index: 454;
+}
+.about_button--telesto::after,
+.about_button--telesto::before {
+  content: "";
+  position: absolute;
+  z-index: 445;
+  inset: 0 0 0 0;
+  margin: auto;
+}
+.button--telesto::before,
+.about_button--telesto::before {
+  width: 135%;
+  -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 0%);
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 0%);
+  transform: translate3d(-100%, 0, 0);
+  background: var(--main);
+}
+
+.button--telesto:hover::before,
+.about_button--telesto:hover::before {
+  color: wheat;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.button--telesto::after,
+.about_button--telesto::after {
+  width: 105%;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.button--telesto:hover::after,
+.about_button--telesto:hover::after {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.01s 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
 .nav {
   position: absolute;
   z-index: 34;
@@ -23,7 +192,7 @@
     }
   }
 
-  li {
+  &__list-search {
     border: 1px solid rgba($color: #ffffff, $alpha: 0.05);
     height: 100%;
     font-size: smaller;
@@ -49,11 +218,15 @@
     padding-left: 0.4rem;
   }
   &__list-logo {
-    padding: 1rem 0;
-    width: 20vw;
+    padding: 1.3rem 0;
+    width: 25vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @include respond(small-tablet) {
       width: auto;
-      padding: 1rem;
+      padding: 1.3rem;
     }
     background-color: white;
     img {
@@ -63,13 +236,13 @@
   &__list-search {
     width: 11vw;
     color: white;
-    background-color: var(--main);
+    // background-color: var(--main);
   }
 
   &__list-item,
   &__list-message-icon,
   &__list-location-icon,
   &__list-lang {
-    width: calc((100vw - 25vw) / 8);
+    width: calc((100vw - 29vw) / 8);
   }
 }
