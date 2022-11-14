@@ -5,10 +5,12 @@ import Headset from "../assets/designs/quiet.png";
 import { FreeMode } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
+import CommonNav from "../Widgets/commonNav";
 function Slider() {
   const sliderBar = useRef(null) as React.LegacyRef<HTMLElement> | any;
   return (
     <div ref={sliderBar} className="slide__container">
+      <CommonNav />
       <Swiper
         slidesPerView={4}
         spaceBetween={2}

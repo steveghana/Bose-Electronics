@@ -199,10 +199,8 @@
     position: relative;
     color: var(--fade-text);
     font-size: x-small;
+    @include flex();
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   &_dot {
     position: absolute;

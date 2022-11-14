@@ -2,21 +2,65 @@
 .slide {
   &__container {
     height: 40vh;
-    width: 100%;
-
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    @include respond(small-tablet) {
+      width: 100%;
+    }
+    margin: auto;
     img {
       width: 100px;
       margin: auto 0;
       pointer-events: none;
     }
+    .music {
+      &__nav-wrapper {
+        color: rgb(170, 166, 166);
+      }
+      &__nav-item {
+        position: relative;
+        overflow: hidden;
+        padding: 0.5rem 0;
+        &::before {
+          content: "";
+          position: absolute;
+          height: 2px;
+          background: rgb(0, 0, 0);
+          left: 0%;
+          bottom: 0%;
+          width: 50%;
+          translate: -110% 0;
+          transition: translate 300ms ease, color 300ms ease;
+        }
+        &:hover {
+          color: rgb(0, 0, 0);
+          position: relative;
+
+          &::before {
+            translate: 0% 0;
+          }
+        }
+      }
+      &__nav-paginate {
+        div {
+          color: rgb(170, 166, 166);
+        }
+        .pagination {
+          div:first-child {
+            color: black !important;
+          }
+        }
+      }
+    }
   }
   &__item {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     height: 30%;
+
     flex-direction: column;
     align-items: center;
-    padding: 4rem 0;
     .price {
       display: flex;
       gap: 0.3rem;
@@ -36,7 +80,8 @@
   &__items {
     height: 100%;
     cursor: grab;
-    width: 70%;
+    transform: translateY(-40%);
+    width: 100%;
     @include respond(small-tablet) {
       width: 100%;
     }

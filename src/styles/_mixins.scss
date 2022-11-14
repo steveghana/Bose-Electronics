@@ -33,14 +33,19 @@
   position: absolute;
 }
 @mixin flex(
-  $flexDirection: row,
+  $direction: row,
   $JustifyContent: center,
   $alignItems: center,
   $gap: 0rem
 ) {
   display: flex;
-  flex-direction: $flexDirection;
+  flex-direction: $direction;
   justify-content: $JustifyContent;
   align-items: $alignItems;
   gap: $gap;
+}
+@mixin BG-IMG-Defaults($bgposition: center, $size: auto) {
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-position: $bgposition;
 }

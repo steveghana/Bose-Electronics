@@ -17,10 +17,8 @@
     left: 0%;
     z-index: -1;
     background-image: url(../assets/designs/pexels-pavel-danilyuk-8001060.jpg);
-    background-position: center;
+    @include BG-IMG-Defaults($bgposition: center, $size: cover);
     height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
     mix-blend-mode: luminosity;
     @include respond(small-tablet) {
       padding: 1rem;
@@ -29,11 +27,12 @@
   }
   &__text-container {
     font-size: 4rem;
-    display: flex;
+    @include flex($direction: column);
+
     color: white;
-    flex-direction: column;
+
     position: relative;
-    justify-content: center;
+
     background-color: transparent;
     margin: auto auto auto 0;
     margin: 5rem 0 0 16vw;

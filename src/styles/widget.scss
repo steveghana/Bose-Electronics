@@ -109,3 +109,38 @@
     font-size: x-small;
   }
 }
+.music {
+  &__nav-wrapper {
+    display: flex;
+    color: var(--dark-text);
+    gap: 2.3rem;
+    padding: 2.4rem 1.4rem;
+    padding-bottom: 5rem;
+    font-size: 0.9vw;
+    @include respond(small-tablet) {
+      font-size: 10px;
+      gap: 1rem;
+    }
+    align-items: center;
+  }
+
+  &__nav-paginate {
+    margin: 0 auto;
+    display: flex;
+    translate: 5vw 0;
+    @include respond(small-tablet) {
+      translate: 2vw 0;
+    }
+    gap: 1rem;
+    div {
+      color: var(--dark-text);
+    }
+    .pagination {
+      display: flex;
+      gap: 0.5rem;
+      div:first-child {
+        color: white;
+      }
+    }
+  }
+}

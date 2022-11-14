@@ -3,7 +3,6 @@
   &__container {
     display: flex;
     height: auto;
-    // padding-bottom: 5rem;
     width: 100%;
     @include respond(small-tablet) {
       flex-direction: column;
@@ -34,9 +33,8 @@
     }
     .contact_icon {
       border-radius: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex();
+
       margin: auto;
       width: 50px;
       height: 50px;
@@ -66,17 +64,15 @@
     flex-direction: column;
     &-top {
       background: url(../assets/designs/mymanu-clik-earphone-designboom-07.jpg);
-      background-position: center;
+      @include BG-IMG-Defaults($bgposition: center, $size: cover);
     }
     &-bottom {
       background: url(../assets/designs/artworks-000337069908-ikocd6-t500x500.jpg);
-      background-position: left top;
+      @include BG-IMG-Defaults($bgposition: left top, $size: cover);
     }
 
     &-top,
     &-bottom {
-      background-repeat: no-repeat;
-      background-size: cover;
       position: relative;
       &::before {
         content: "";
@@ -94,9 +90,7 @@
   &__right {
     position: relative;
     background: url(../assets/designs/pexels-daniel-balarezo-11199906.jpg);
-    background-position: -275px 0;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include BG-IMG-Defaults($bgposition: -275px 0, $size: cover);
     position: relative;
     &::before {
       content: "";
@@ -117,9 +111,9 @@
       z-index: 45;
       left: 0%;
       background-position: -0px 0px;
-      background-repeat: no-repeat;
       box-shadow: 1px 1px 15px rgba($color: #000000, $alpha: 0.2);
-      background-size: cover;
+      @include BG-IMG-Defaults($bgposition: center, $size: cover);
+
       @include respond(small-tablet) {
         background-size: contain;
         position: relative;
@@ -135,7 +129,7 @@
     padding: 3rem;
     display: flex;
     flex-direction: column;
-    padding-bottom: 10rem;
+    padding-bottom: 9rem;
     @include respond(small-tablet) {
       padding-bottom: 4rem;
     }
@@ -161,10 +155,8 @@
         div {
           width: 23%;
           height: 70px;
-          background-repeat: no-repeat;
           background-color: #000000;
-          background-position: top;
-          background-size: cover;
+          @include BG-IMG-Defaults($bgposition: top, $size: cover);
         }
       }
     }
@@ -177,9 +169,7 @@
     img {
       height: 80px;
       width: 80px;
-      background-position: top;
-      background-repeat: no-repeat;
-      background-size: cover;
+      @include BG-IMG-Defaults($bgposition: top, $size: cover);
       background-color: black;
     }
   }

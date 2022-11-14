@@ -2,27 +2,11 @@ import React from "react";
 import { PlayArrow } from "@material-ui/icons";
 import Disk from "../assets/designs/1755220.png";
 import Play from "./Play";
-
+import CommonNav from "./commonNav";
 function MusicRecord() {
   return (
     <div className="music__icon-container">
-      <div className="music__nav">
-        <ul className="music__nav-wrapper">
-          <li className="music__nav-item">Quiet</li>
-          <li className="music__nav-item">Soundlink</li>
-          <li className="music__nav-item">Comfort</li>
-          <li className="music__nav-item">Accesories</li>
-          <li className="music__nav-paginate">
-            <div>PREV</div>
-            <div className="pagination">
-              {new Array(3).fill("").map((item, i) => (
-                <div>{i + 1}</div>
-              ))}
-            </div>
-            <div>NEXT</div>
-          </li>
-        </ul>
-      </div>
+      <CommonNav padding="5rem" />
       <div className="music__record-section">
         <h2 className="super__strong">
           sup <br /> erstro <br /> ng
@@ -37,7 +21,9 @@ function MusicRecord() {
           <li>Soundlink</li>
         </div>
         <div className="line"></div>
-        <h1 className="brand__text">BOSE</h1>
+        <div className="brand__text">
+          <h1>BOSE</h1>
+        </div>
         <div className="music__concert"></div>
         <div className="disk__img">
           <img src={Disk} alt="Disk" />
