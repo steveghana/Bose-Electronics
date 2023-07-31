@@ -95,14 +95,15 @@
   }
   &__top {
     display: flex;
-    height: 60%;
+    height: 65%;
+    background-color: red;
+    width: 100%;
     @include respond(small-tablet) {
       height: auto;
     }
     width: 100%;
-    justify-content: space-between;
-    background-color: aqua;
     div:nth-child(2) {
+      // display: none;
       background-size: cover;
       @include respond(small-tablet) {
         width: 100%;
@@ -113,6 +114,13 @@
         object-fit: cover;
       }
     }
+  }
+  &__images:nth-child(1) {
+
+    width: 35%;
+  }
+  &__images:nth-child(2) {
+    width: 65%;
   }
   &__images {
     background: linear-gradient(
@@ -143,8 +151,8 @@
       height: 100%;
     }
     .jack {
+      object-position: center;
       object-fit: cover;
-      object-position: left;
       @include respond(small-tablet) {
         object-position: center;
       }
